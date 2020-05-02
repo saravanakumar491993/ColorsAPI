@@ -16,7 +16,7 @@ jobs:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
         APP_NAME: ${{ 'colorsapisaran' }}
       run: |
-        docker login registry.heroku.com --username=$HEROKU_USER_NAME --password=$HEROKU_API_KEY 
+        docker login registry.heroku.com --username $HEROKU_USER_NAME --password $HEROKU_API_KEY 
         heroku container:push web -a $APP_NAME
         heroku container:release web -a $APP_NAME
  
